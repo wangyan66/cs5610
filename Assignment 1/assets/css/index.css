@@ -3,12 +3,13 @@ body {
   background-color: #f8f8ff;
   font-family: 'Cabin', sans-serif;
 }
-/* article {
+article {
   width: 80vw;
-} */
+}
 nav {
   /* background-color: #7fffd4; */
   text-align: center;
+  font-size: 20pt;
 }
 a:visited {
   color: #cd853f;
@@ -18,27 +19,45 @@ a:visited {
 }
 .footer__socials {
   text-align: center;
+  font-size: 25pt;
 }
 .home__data {
-  float: left;
-  text-align: right;
-  width: 50%;
+  /* float: left; */
+  /* text-align: center; */
+  /* width: 50%; */
+  margin-left: 15%;
+  margin-right: 3%;
   font-size: 20pt;
 }
-.home_image {
-  float: right;
-  width: 50%;
-}
-#about_title {
+/* .home_image {
+  margin-left: 10%;
+} */
+/* #about_title {
   font-size: 40pt;
 }
 #about_info {
   font-size: 40pt;
+} */
+.project {
+  border: 2px dashed darkgoldenrod;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20pt;
 }
-.footer__socials {
-  font-size: 25pt;
+.education {
+  border: 2px dashed darkgoldenrod;
+
+  font-size: 20pt;
 }
 /* header {
   width: 100vw;
   text-align: center;
 } */
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+}
+.wrapper > div {
+  flex: 1;
+}
