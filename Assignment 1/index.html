@@ -53,7 +53,7 @@
         <img src="assets/images/cat.jpg" alt="Image" width="324" height="432">
         <figcaption class="center">o(=•ェ•=)m🐱</figcaption>
       </figure>
-    </div>>
+    </div>
     <div class="github_status">
       <h1>📈 My GitHub Stats:</h1>
       <p>
@@ -64,27 +64,24 @@
           src="https://github-readme-stats.vercel.app/api/top-langs/?username=wangyan66&layout=compact&theme=radical&hide_border=true" />
       </p>
     </div>
-    <div class="date">
-      <fieldset>
-        <legend>Select a maintenance drone:</legend>
-
+    <form id="date_time_display">
+      <p>Please select Date/Time display</p>
+      <div>
         <div>
-          <input type="radio" id="huey" name="drone" value="huey" checked>
-          <label for="huey">Huey</label>
+          <input type="radio" id="date" name="display" value="Date" checked>
+          <label for="date">Date</label>
         </div>
 
         <div>
-          <input type="radio" id="dewey" name="drone" value="dewey">
-          <label for="dewey">Dewey</label>
+          <input type="radio" id="time" name="display" value="Time">
+          <label for="time">Time</label>
         </div>
-
-        <div>
-          <input type="radio" id="louie" name="drone" value="louie">
-          <label for="louie">Louie</label>
-        </div>
-      </fieldset>
-
-    </div>
+      </div>
+      <div>
+        <button type="submit" id="submit_btn">Show</button>
+      </div>
+    </form>
+    <div id="container"></div>
 
   </article>
 
@@ -102,7 +99,7 @@
     </div>
   </footer>
   <!-- js -->
-  <script type="text/javascript" src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

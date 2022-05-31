@@ -3,7 +3,7 @@
   --nav-bg-color: #e7e7ce;
   --link-normal-color: #cd853f;
   --link-vis-color: #7c7ccf;
-  --link-hover-color: #8b6c8b;
+  --link-hover-color: #030303;
   --section-border-color: #b8860b;
   --text-color: #000000;
 
@@ -72,13 +72,13 @@ footer {
 }
 /* link */
 a:link {
-  color: #cd853f;
+  color: var(--link-normal-color);
 }
 a:visited {
-  color: #7c7ccf;
+  color: var(--link-vis-color);
 }
 a:hover {
-  color: #8b6c8b;
+  color: var(--link-hover-color);
 }
 
 .center {
@@ -90,7 +90,13 @@ a:hover {
   float: right;
   color: var(--text-color);
   background-color: transparent;
-  border-color: transparent;
+  border-color: rgb(22, 25, 39);
+  font-size: 15pt;
+}
+#submit_btn {
+  color: var(--text-color);
+  background-color: transparent;
+  /* border-color: transparent; */
   font-size: 15px;
 }
 /* home */
@@ -115,9 +121,19 @@ a:hover {
   margin-left: 15%;
   margin-right: 3%;
 }
+#date_time_display {
+  font-size: 15pt;
+  margin-left: 15%;
+  margin-right: 3%;
+}
+#container {
+  font-size: 15pt;
+  margin-left: 15%;
+  margin-right: 3%;
+}
 /* project */
 .project {
-  border: 2px dashed #b8860b;
+  border: 2px dashed var(--section-border-color);
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 20px;
@@ -129,7 +145,7 @@ a:hover {
 }
 /* education */
 .education {
-  border: 2px dashed #b8860b;
+  border: 2px dashed var(--section-border-color);
   margin-left: 20px;
   font-size: 20pt;
 }
