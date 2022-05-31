@@ -1,14 +1,36 @@
+:root {
+  --page-bg-color: #f8f8ff;
+  --nav-bg-color: #e7e7ce;
+  --link-normal-color: #cd853f;
+  --link-vis-color: #7c7ccf;
+  --link-hover-color: #8b6c8b;
+  --section-border-color: #b8860b;
+  --text-color: #000000;
+
+  --page-bg-image: url('../images/paper.gif');
+}
+
 html {
   height: 100%;
 }
+
+body.dark-theme {
+  --text-color: #ffffff;
+  --page-bg-image: url('');
+  --page-bg-color: rgb(22, 25, 39);
+  --nav-bg-color: rgb(22, 25, 39);
+}
+
 body {
-  background-image: url('../images/paper.gif');
-  background-color: #f8f8ff;
+  background-image: var(--page-bg-image);
+  background-color: var(--page-bg-color);
+
   font-family: 'Cabin', sans-serif;
   min-height: 100%;
   padding: 0;
   margin: 0;
   position: relative;
+  color: var(--text-color);
 }
 body::after {
   height: 2em;
@@ -22,7 +44,7 @@ nav {
   width: 80vw;
   text-align: center;
   font-size: 20pt;
-  background-color: rgb(231, 231, 206);
+  background-color: var(--nav-bg-color);
   display: flex;
   justify-content: space-around;
   position: -webkit-sticky;
@@ -35,6 +57,7 @@ header {
   position: sticky;
   top: 0px;
 }
+
 .title {
   text-align: center;
   font-size: 30px;
@@ -62,6 +85,14 @@ a:hover {
   text-align: center;
 }
 
+/* theme button */
+#theme-button {
+  float: right;
+  color: var(--text-color);
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 15px;
+}
 /* home */
 .wrapper {
   display: flex;
@@ -86,7 +117,7 @@ a:hover {
 }
 /* project */
 .project {
-  border: 2px dashed darkgoldenrod;
+  border: 2px dashed #b8860b;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 20px;
@@ -98,7 +129,7 @@ a:hover {
 }
 /* education */
 .education {
-  border: 2px dashed darkgoldenrod;
+  border: 2px dashed #b8860b;
   margin-left: 20px;
   font-size: 20pt;
 }
