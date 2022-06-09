@@ -1,5 +1,7 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+html
+  head
+    link(rel='stylesheet', href='/assets/css/index.css', type = 'text/css')
+    title= title
+  body
+    h1=title 
+    p= message

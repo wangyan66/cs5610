@@ -1,5 +1,6 @@
 const db = require('./db.js')
-
+var ObjectId = require('mongodb').ObjectId
+var createError = require('http-errors')
 //Add new note
 exports.addNote = async function addNote (req, res) {
   const noteInfo = req.body
@@ -36,15 +37,31 @@ exports.getNotes = async function getNotes (req, res) {
 }
 
 //Get note detail
-exports.getNoteDetail = async function getNoteDetail (req, res) {
+function isValidObjectId (id) {
+
+  if (ObjectId.isValid(id)) {
+    if ((String)(new ObjectId(id)) === id)
+      return true
+    return false
+  }
+  return false
+}
+exports.getNoteDetail = async function getNoteDetail (req, res, next) {
   const query = req.query
   //read one note detail in database
-  var ObjectId = require('mongodb').ObjectId
-  const result = await db.readOneDocument({ _id: ObjectId(req.params.id) })
 
-  res.send({
-    status: 200,
-    msg: 'get note detail successfully',
-    data: result
-  })
+  if (!isValidObjectId(req.params.id)) next(createError(404))
+  else {
+    const result = await db.readOneDocument({ _id: ObjectId(req.params.id) })
+    if (!result) next(createError(404))
+    else res.render('index', { title: result.title, message: result.description })
+  }
+
+
+
+  // res.send({
+  //   status: 200,
+  //   msg: 'get note detail successfully',
+  //   data: result
+  // })
 }
