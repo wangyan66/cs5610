@@ -1,7 +1,7 @@
 const getAllBtn = document.getElementById('index_note_button')
 async function getAll () {
   try {
-    let result = await fetch('http://127.0.0.1:3000/notes/get')
+    let result = await fetch('/notes/get')
     const response = await result.json()
     const code = response.status
     const msg = response.msg
@@ -25,7 +25,7 @@ async function getDetail (id) {
 
   try {
     console.log('Request')
-    window.location.assign('http://127.0.0.1:3000/notes/get/' + id)
+    window.location.assign('/notes/get/' + id)
     // window.open('http://127.0.0.1:3000/notes/get/' + id)
     // console.log("response")
     // let result = await fetch('http://127.0.0.1:3000/notes/get/' + id)
@@ -85,7 +85,7 @@ form.addEventListener("submit", async function (event) {
     alert('Title must be not empty!')
     return
   }
-  const response = await fetch('http://127.0.0.1:3000/notes/post', {
+  const response = await fetch('/notes/post', {
     method: 'POST',
     headers: {
       "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
