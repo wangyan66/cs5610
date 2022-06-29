@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>note-taking website</title>
+  <!-- css -->
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+  <!--==================== FAVICON ====================-->
+  <link rel="icon" type="image/x-icon" href="favicon.icon">
+</head>
+
+<body>
+  <header>
+    <h1 class="title">Notes</h1>
+    <!-- <button id="index_note_button">Get</button> -->
+  </header>
+  <article>
+    <section id="index_note_section">
+    </section>
+    <section>
+      <form action="/notes/post" method="post" class="basic-grey" id="index_note_form">
+
+        <h1>Add a new note
+          <span>Please fill all the texts in the fields.</span>
+        </h1>
+        <label>
+          <span>Title :</span>
+          <input id="title" type="text" name="title" />
+        </label>
+
+        <label>
+          <span>Description :</span>
+          <textarea id="description" name="description"></textarea>
+        </label>
+        <label>
+          <span>&nbsp;</span>
+          <!-- <input type="button" class="button"  value="Send" /> -->
+          <button id="submit_btn" type="submit">Send</button>
+        </label>
+      </form>
+    </section>
+  </article>
+
+
+  <!-- js -->
+  <script type="text/javascript" src="assets/js/index.js"></script>
+</body>
+
+</html>

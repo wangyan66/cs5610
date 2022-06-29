@@ -1,0 +1,116 @@
+:root {
+  --page-bg-color: #f8f8ff;
+  --nav-bg-color: #e7e7ce;
+  --link-normal-color: #cd853f;
+  --link-vis-color: #7c7ccf;
+  --link-hover-color: #030303;
+  --section-border-color: #b8860b;
+  --text-color: #000000;
+
+  --page-bg-image: url('../images/paper.gif');
+}
+body {
+  background-color: #f7f7f7;
+
+  /* background-image: url('../images/paper.gif'); */
+}
+h1 {
+  text-align: center;
+  font-size: 30px;
+}
+p {
+  text-align: center;
+  font-size: 30px;
+}
+.title {
+  text-align: center;
+}
+
+.index_note_block {
+  border: 2px dashed var(--section-border-color);
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.index_note_title {
+  text-align: center;
+  font-size: 30px;
+}
+.index_note_description {
+  text-align: center;
+  font-size: 15px;
+}
+.basic-grey {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  background: #f7f7f7;
+  padding: 25px 15px 25px 10px;
+  font: 12px Georgia, 'Times New Roman', Times, serif;
+  color: #888;
+  text-shadow: 1px 1px 1px #fff;
+  border: 1px solid #e4e4e4;
+}
+.basic-grey h1 {
+  font-size: 25px;
+  padding: 0px 0px 10px 40px;
+  display: block;
+  border-bottom: 1px solid #e4e4e4;
+  margin: -10px -15px 30px -10px;
+  color: #888;
+}
+.basic-grey h1 > span {
+  display: block;
+  font-size: 11px;
+}
+.basic-grey label {
+  display: block;
+  margin: 0px;
+}
+.basic-grey label > span {
+  float: left;
+  width: 20%;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 10px;
+  color: #888;
+}
+.basic-grey input[type='text'],
+.basic-grey input[type='email'],
+.basic-grey textarea,
+.basic-grey select {
+  border: 1px solid #dadada;
+  color: #888;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 70%;
+  font-size: 12px;
+  line-height: 15px;
+  box-shadow: inset 0px 1px 4px #ececec;
+  -moz-box-shadow: inset 0px 1px 4px #ececec;
+  -webkit-box-shadow: inset 0px 1px 4px #ececec;
+}
+.basic-grey textarea {
+  padding: 5px 3px 3px 5px;
+}
+.basic-grey textarea {
+  height: 100px;
+}
+.basic-grey .button {
+  background: #e27575;
+  border: none;
+  padding: 10px 25px 10px 25px;
+  color: #fff;
+  box-shadow: 1px 1px 5px #b6b6b6;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #9e3f3f;
+  cursor: pointer;
+}
+.basic-grey .button:hover {
+  background: #cf7a7a;
+}
